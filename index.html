@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Lời chúc sinh nhật dễ thương</title>
+    <style>
+      :root {
+        --bg: #fff7fe;
+        --card: #ffffff;
+        --accent: #ff79c6;
+        --accent-2: #ffd1e8;
+        --text: #3b2a35;
+        --soft: #f9eef6;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: linear-gradient(180deg, var(--bg), #fff0f8);
+        font-family: "Poppins", sans-serif;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        overflow: hidden;
+      }
+      .stage {
+        width: 100%;
+        max-width: 420px;
+        background: var(--card);
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(125, 50, 90, 0.1);
+        overflow: hidden;
+        padding: 20px;
+        position: relative;
+        text-align: center;
+        animation: popIn 0.8s ease;
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .title {
+        color: var(--accent);
+        font-size: 1.6em;
+        margin-bottom: 6px;
+      }
+      .subtitle {
+        font-size: 1em;
+        margin-bottom: 16px;
+        color: #6b4757;
+      }
+      .message {
+        background: var(--soft);
+        padding: 16px;
+        border-radius: 12px;
+        font-size: 0.95em;
+        line-height: 1.6;
+        color: #53373f;
+        transition: opacity 0.5s;
+      }
+      .cake {
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(180deg, #fff6fb, #fff0f6);
+        margin: 24px auto;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 6px 18px rgba(200, 100, 150, 0.08);
+        animation: floatCake 3s ease-in-out infinite;
+      }
+      @keyframes floatCake {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      .candle {
+        width: 10px;
+        height: 40px;
+        background: linear-gradient(180deg, #ffdede, #ffb6d0);
+        border-radius: 6px;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .flame {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 35% 30%,
+          #fff7b2 0%,
+          #ffdc4d 25%,
+          #ff7f7f 60%
+        );
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: flicker 1s infinite;
+      }
+      @keyframes flicker {
+        0%,
+        100% {
+          transform: translateX(-50%) scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: translateX(-49%) scale(1.1);
+          opacity: 0.9;
+        }
+      }
+      .btn {
+        display: block;
+        width: 100%;
+        border: none;
+        background: linear-gradient(90deg, var(--accent), #ffb3d9);
+        color: white;
+        padding: 12px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 16px;
+        box-shadow: 0 6px 16px rgba(255, 120, 180, 0.2);
+        transition: transform 0.2s;
+      }
+      .btn:active {
+        transform: scale(0.96);
+      }
+      .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: linear-gradient(180deg, #ff8fc7, #ff5fa6);
+        transform: rotate(-45deg);
+        border-radius: 6px 6px 0 0;
+        animation: floatUp 6s ease-in infinite;
+        opacity: 0.9;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: inherit;
+        border-radius: 50%;
+      }
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
+      .heart::after {
+        left: 10px;
+        top: 0;
+      }
+      @keyframes floatUp {
+        0% {
+          transform: translateY(0) rotate(-45deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-200px) rotate(-45deg);
+          opacity: 0;
+        }
+      }
+      .sparkle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(circle, #fff, #ffb3d9);
+        border-radius: 50%;
+        opacity: 0.7;
+        animation: sparkle 2s linear infinite;
+      }
+      @keyframes sparkle {
+        0%,
+        100% {
+          transform: scale(0.8);
+          opacity: 0.6;
+        }
+        50% {
+          transform: scale(1.4);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <h1 class="title">🎂 Chúc mừng sinh nhật nha 🎉</h1>
+      <div class="cake">
+        <div class="candle"><div class="flame" id="flame"></div></div>
+      </div>
+      <div class="message" id="message">
+        Mong rằng hôm nay của bạn sẽ thật ngọt ngào, tràn đầy niềm vui và bất
+        ngờ dễ thương nhất! 💕
+      </div>
+      <button class="btn" id="blowBtn">Thổi nến</button>
+    </div>
+    <script>
+      const blowBtn = document.getElementById("blowBtn");
+      const flame = document.getElementById("flame");
+      const message = document.getElementById("message");
+
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.style.left = Math.random() * window.innerWidth + "px";
+        heart.style.bottom = "0";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }
+
+      function createSparkle() {
+        const sparkle = document.createElement("div");
+        sparkle.className = "sparkle";
+        sparkle.style.left = Math.random() * window.innerWidth + "px";
+        sparkle.style.top = Math.random() * window.innerHeight + "px";
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 2000);
+      }
+
+      function playSound() {
+        try {
+          const ctx = new (window.AudioContext || window.webkitAudioContext)();
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.type = "triangle";
+          o.frequency.value = 880;
+          g.gain.setValueAtTime(0.2, ctx.currentTime);
+          o.start();
+          o.frequency.exponentialRampToValueAtTime(440, ctx.currentTime + 0.5);
+          g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1);
+          o.stop(ctx.currentTime + 1);
+        } catch (e) {
+          console.warn("Audio not available");
+        }
+      }
+
+      blowBtn.addEventListener("click", () => {
+        flame.style.display = "none";
+        playSound();
+        for (let i = 0; i < 15; i++) setTimeout(createHeart, i * 300);
+        for (let i = 0; i < 20; i++) setTimeout(createSparkle, i * 100);
+        message.style.opacity = "0";
+        setTimeout(() => {
+          message.textContent =
+            "Happy Birthday! Năm nay phải thật rực rỡ nha bạn! Hãy cứ là chính mình, tự tin, độc lập và chinh phục mọi mục tiêu phía trước! 🌸✨";
+          message.style.opacity = "1";
+        }, 2000);
+        setTimeout(() => (flame.style.display = "block"), 5000);
+      });
+    </script>
+  </body>
+</html>
